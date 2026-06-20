@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard - Cyber Crime Reporting System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">🛡️</div>
+            <div>
+               
+                <p>User Panel</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            
+            <a href="#raise-complaint" class="menu-item">🚨 Raise Complaint</a>
+            <a href="#my-complaints" class="menu-item">📄 My Complaints</a>
+            <a href="#" class="menu-item" onclick="logout()">🚪 Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Panel -->
+    <main class="main-panel">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div>
+                <h1 class="topbar-title">User Dashboard</h1>
+                <p class="topbar-subtitle">Track and manage your cyber crime complaints</p>
+            </div>
+
+            <div class="topbar-user" id="welcome">Welcome User</div>
+        </header>
+
+        <!-- Raise Complaint -->
+        <section class="panel-card" id="raise-complaint">
+            <div class="section-header">
+                <div>
+                    <h2>Raise Complaint</h2>
+                    <p>Submit a new complaint securely through the platform</p>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label>Complaint Title</label>
+                    <input type="text" id="title" placeholder="Enter complaint title">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Description</label>
+                    <textarea id="description" placeholder="Describe your complaint in detail"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <button class="primary-btn" onclick="addComplaint()">Submit Complaint</button>
+                    <p id="msg" class="success-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complaints -->
+        <section class="panel-card" id="my-complaints">
+            <div class="section-header">
+                <div>
+                    <h2>My Complaints</h2>
+                    <p>Review all complaints submitted by you</p>
+                </div>
+            </div>
+
+            <div id="complaints" class="complaint-list"></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/utils.js"></script>
+<script src="../js/complaint.js"></script>
+</body>
+</html>

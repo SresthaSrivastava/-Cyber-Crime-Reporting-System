@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Cyber Crime Reporting System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">🛡️</div>
+            <div>
+                
+                <p>Admin Panel</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="#complaints-section" class="menu-item">📋 Complaints</a>
+            <a href="#logs-section" class="menu-item">📝 Logs</a>
+            <a href="#" class="menu-item" onclick="logout()">🚪 Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-panel">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div>
+                <h1 class="topbar-title">Admin Dashboard</h1>
+                <p class="topbar-subtitle">Manage complaints, monitor progress, and review activity logs</p>
+            </div>
+
+            <div class="topbar-user">Admin Access</div>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats-row">
+            <div class="stat-box">
+                <p>Total Complaints</p>
+                <h2 id="total">0</h2>
+            </div>
+
+            <div class="stat-box">
+                <p>Pending Cases</p>
+                <h2 id="pending">0</h2>
+            </div>
+
+            <div class="stat-box">
+                <p>Resolved Cases</p>
+                <h2 id="resolved">0</h2>
+            </div>
+        </section>
+
+        <!-- Complaints -->
+        <section class="panel-card" id="complaints-section">
+            <div class="section-header">
+                <div>
+                    <h2>All Complaints</h2>
+                    <p>View all user complaints and update their current status</p>
+                </div>
+            </div>
+
+            <div id="complaints" class="admin-complaint-list"></div>
+        </section>
+
+        <!-- Logs -->
+        <section class="panel-card" id="logs-section">
+            <div class="section-header">
+                <div>
+                    <h2>Activity Logs</h2>
+                    <p>Track recent administrative actions and complaint updates</p>
+                </div>
+            </div>
+
+            <div id="logs" class="log-list"></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>
